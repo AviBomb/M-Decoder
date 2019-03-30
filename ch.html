@@ -17,6 +17,22 @@
         <div class="Diff" id="Diff"><h2 class="neon green"><a href="#">Difficult</a></h2></div>
     </div>
   </div>
+  <script>
+        if (localStorage.hasOwnProperty('a1')) {
+        var a1 = JSON.parse(localStorage.getItem('a1'));
+        a1 = a1 || [];
+        var n = a1.length;
+        var x = a1[0];
+        var Easy = document.getElementById('Easy');
+        console.log(Easy);
+        Easy.innerHTML = '';
+        console.log(Easy);
+        var b="<h2 class=\"neon pink\"><a href=\"qu_" ;
+        var c=".html\">Easy</a></h2>";
+        Easy.innerHTML=b+x+c;
+        console.log(Easy)
+        }
+  </script>
   <script src="main_ch.js"></script>
 </body>
 </html>

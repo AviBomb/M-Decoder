@@ -133,19 +133,61 @@ a:active {
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
 		</div>
-	</div>
-   <div class="centered2">
-   <form class="form-inline" id="myForm">
+    </div>
+    <div class="centered2">
+    <form class="form-inline" id="myForm">
     <div class="form-group">
         <label><font color=#fff>Rating</font></label>
         <br>
         <input type="number" class="form-control" name="Answer" id="Answer" placeholder="Answer Here">
     </div>
     <button id="stop1" class="bu">Submit</button><button class="bu1"><a href="ch.html">Return</a></button>
-   </form>
-   <div id="l1"><a href=#.html><div class="triangle-left cl"></div></a></div>
-   <div id="r1"><a href=#.html><div class="triangle-right cr"></div></a></div>
+    </form>
+   <div class="l1" id="l1"><a href=#.html><div class="triangle-left cl"></div></a></div>
+   <div class="r1" id="r1"><a href=#.html><div class="triangle-right cr"></div></a></div>
    </div>
+   <script>
+      var a1 = JSON.parse(localStorage.getItem('a1'));
+  a1 = a1 || [];
+  var n = a1.length;
+  console.log(a1[0],a1[1],a1[2],a1[3],a1[4])
+  for(var i=0;i<n;++i){
+    var r=i-1;
+    var t=i+1;
+  if(r==-1)
+    r=(n-1);
+  if(t==n)
+    t=0;
+  console.log(r);
+  console.log(t);
+  if(a1[i]==1){
+    var x=a1[r];
+    var y=a1[t];
+    console.log(x)
+    console.log(y)
+    var l1 = document.getElementById('l1');
+    var r1 = document.getElementById('r1');
+    console.log(l1)
+    console.log(r1)
+    l1.innerHTML = '';
+    r1.innerHTML = '';
+    console.log(l1)
+    console.log(r1)
+    var a="<a href=\"qu_";
+    var b=".html\"><div class=\"triangle-left cl\"></div></a>";   
+    var c="<a href=\"qu_" ;
+    var d=".html\"><div class=\"triangle-right cr\"></div></a>";
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    l1.innerHTML=a+x+b;
+    r1.innerHTML=c+y+d;
+    console.log(l1)
+    console.log(r1)
+  }
+  }
+   </script>
    <script src="main.js"></script>
    <script src="main_ch.js"></script>
 </body>

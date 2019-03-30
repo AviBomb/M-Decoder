@@ -10,17 +10,17 @@ function saveAns(e){
 var m = {
       Answer: Answer
   }
-if(localStorage.getItem('m1') === null){
-    var m1 = [];
-    m1.push(m);
-    localStorage.setItem('m1', JSON.stringify(m1));
+if(localStorage.getItem('m2') === null){
+    var m2 = [];
+    m2.push(m);
+    localStorage.setItem('m2', JSON.stringify(m2));
   } 
 else {
-    var m1 = JSON.parse(localStorage.getItem('m1'));
-    if(3-m1.length>0)
+    var m2 = JSON.parse(localStorage.getItem('m2'));
+    if(3-m2.length>0)
     {
-    	m1.push(m);
-    	localStorage.setItem('m1', JSON.stringify(m1));
+    	m2.push(m);
+    	localStorage.setItem('m2', JSON.stringify(m2));
     }
     else{
     	alert("The Maximum Number of tries are Achieved");
@@ -38,9 +38,9 @@ else {
 
 function fturns(){
   
-  var m1 = JSON.parse(localStorage.getItem('m1'));
-  m1 = m1 || [];
-  var x = m1.length;
+  var m2 = JSON.parse(localStorage.getItem('m2'));
+  m2 = m2 || [];
+  var x = m2.length;
   console.log(x)
   var y = 3-x;
   console.log(y)
@@ -77,19 +77,19 @@ function blink()
     t=0;
   console.log(r);
   console.log(t);
-  if(a1[i]==1){
+  if(a1[i]==2){
     var x=a1[r];
     var y=a1[t];
     console.log(x)
     console.log(y)
-    var l1 = document.getElementById('l1');
-    var r1 = document.getElementById('r1');
-    console.log(l1)
-    console.log(r1)
-    l1.innerHTML = '';
-    r1.innerHTML = '';
-    console.log(l1)
-    console.log(r1)
+    var l2 = document.getElementById('l2');
+    var r2 = document.getElementById('r2');
+    console.log(l2)
+    console.log(r2)
+    l2.innerHTML = '';
+    r2.innerHTML = '';
+    console.log(l2)
+    console.log(r2)
     var a="<a href=\"qu_";
     var b=".html\"><div class=\"triangle-left cl\"></div></a>";   
     var c="<a href=\"qu_" ;
@@ -98,10 +98,10 @@ function blink()
     console.log(b)
     console.log(c)
     console.log(d)
-    l1.innerHTML=a+x+b;
-    r1.innerHTML=c+y+d;
-    console.log(l1)
-    console.log(r1)
+    l2.innerHTML=a+x+b;
+    r2.innerHTML=c+y+d;
+    console.log(l2)
+    console.log(r2)
   }
   }
 }

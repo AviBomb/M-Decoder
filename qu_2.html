@@ -143,10 +143,52 @@ a:active {
     </div>
     <button id="stop1" class="bu">Submit</button><button class="bu1"><a href="ch.html">Return</a></button>
    </form>
-   <div id="l2"><a href=#.html><div class="triangle-left cl"></div></a></div>
-   <div id="r2"><a href=#.html><div class="triangle-right cr"></div></a></div>
+   <div class="l2" id="l2"><a href=#.html><div class="triangle-left cl"></div></a></div>
+   <div class="r2" id="r2"><a href=#.html><div class="triangle-right cr"></div></a></div>
    </div>
-   <script src="main.js"></script>
+   <script>
+      var a1 = JSON.parse(localStorage.getItem('a1'));
+  a1 = a1 || [];
+  var n = a1.length;
+  console.log(a1[0],a1[1],a1[2],a1[3],a1[4])
+  for(var i=0;i<n;++i){
+    var r=i-1;
+    var t=i+1;
+  if(r==-1)
+    r=(n-1);
+  if(t==n)
+    t=0;
+  console.log(r);
+  console.log(t);
+  if(a1[i]==2){
+    var x=a1[r];
+    var y=a1[t];
+    console.log(x)
+    console.log(y)
+    var l2 = document.getElementById('l2');
+    var r2 = document.getElementById('r2');
+    console.log(l2)
+    console.log(r2)
+    l2.innerHTML = '';
+    r2.innerHTML = '';
+    console.log(l2)
+    console.log(r2)
+    var a="<a href=\"qu_";
+    var b=".html\"><div class=\"triangle-left cl\"></div></a>";   
+    var c="<a href=\"qu_" ;
+    var d=".html\"><div class=\"triangle-right cr\"></div></a>";
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    l2.innerHTML=a+x+b;
+    r2.innerHTML=c+y+d;
+    console.log(l2)
+    console.log(r2)
+  }
+  }
+   </script>
+   <script src="main1.js"></script>
    <script src="main_ch.js"></script>
 </body>
 </html>
